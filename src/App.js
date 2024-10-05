@@ -1,25 +1,25 @@
-import logo from './logo.svg';
+import React from 'react';
+import Sidebar from './components/Sidebar';
+import TopBar from './components/TopBar';
+import DashboardMetrics from './components/DashboardMetrics';
+import ComplianceChart from './components/ComplianceChart';
+import Notification from './components/Notification';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="dashboard">
+      <Sidebar />
+      <div className="main-content">
+        <TopBar />
+        <div className="metrics-container">
+          <DashboardMetrics />
+          <ComplianceChart />
+        </div>
+        <Notification />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
