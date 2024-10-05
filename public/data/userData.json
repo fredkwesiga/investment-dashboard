@@ -1,0 +1,44 @@
+{
+    "user": {
+      "name": "Fred Kwesiga",
+      "avatar": "/path-to-avatar.png"
+    },
+    "investments": [
+      {
+        "id": 1,
+        "name": "Actual Investment Portfolio",
+        "performance": "10,000UGX",
+        "date": "01/0ctober/2024"
+      },
+      {
+        "id": 2,
+        "name": "Projected Investment Portfolio",
+        "performance": "40,000 UGX",
+        "date": "31/October/2024"
+      },
+      {
+        "id": 3,
+        "name": "Current Cummulative Revenue",
+        "performance": "0 UGX",
+        "date": "31/October/2024"
+      },
+      {
+        "id": 4,
+        "name": "Out standing investment ",
+        "performance": "-10,000 UGX",
+        "date": "01/0ctober/2024"
+      }
+    ],
+    "notifications": [
+      {
+        "id": 1,
+        "message": "Investment in Real Estate Fund increased by 2%."
+      },
+      {
+        "id": 2,
+        "message": "Your investment in Bonds is maturing soon."
+      }
+    ],
+    "portfolioValue": "$500,000"
+  }
+  

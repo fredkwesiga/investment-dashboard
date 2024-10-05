@@ -1,16 +1,26 @@
-// src/components/Notification.js
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 const Notification = () => {
+  const [notifications, setNotifications] = useState([]);
+
+  useEffect(() => {
+    axios.get('/data/userData.json').then(response => {
+      setNotifications(response.data.notifications);
+    });
+  }, []);
+
   return (
     <div className="notification-section">
-      <h3>Recent Activity</h3>
+      <h4>Recent Activity</h4>
       <ul>
-        <li>Investment added: 10,000 UGX on 01/October/2024</li>
-        <li>Investment projected: 40,000 UGX by 31/December/2024</li>
+        {notifications.map(notif => (
+          <li key={notif.id}>{notif.message}</li>
+        ))}
       </ul>
     </div>
   );
 };
 
 export default Notification;
+

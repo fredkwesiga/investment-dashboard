@@ -3,6 +3,8 @@ import React from 'react';
 
 const Sidebar = () => {
   return (
+
+    
     <aside className="sidebar">
       <ul>
         <li><a href="/dashboard">Dashboard</a></li>
@@ -11,6 +13,11 @@ const Sidebar = () => {
         <li><a href="/loans">Loans</a></li>
         <li><a href="/contact">Contact</a></li>
         <li><a href="/profile">My Profile</a></li>
+
+        {/* <li><a href="#">Profile</a></li>
+        <li><a href="#">Investments</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Notifications</a></li> */}
       </ul>
     </aside>
   );
