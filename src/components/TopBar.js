@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './TopBar.css'; // Import the CSS for the TopBar
+import '../App.css';  // Make sure App.css includes the necessary styles
 
 const TopBar = () => {
   const [user, setUser] = useState({});
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     axios.get('/data/userData.json')
@@ -16,12 +17,40 @@ const TopBar = () => {
       });
   }, []);
 
+  const handleSearchChange = (e) => {
+    setSearchQuery(e.target.value);
+  };
+
+  const handleSearchSubmit = (e) => {
+    e.preventDefault();
+    // Implement search functionality (e.g., API call, filtering, etc.)
+    console.log('Searching for:', searchQuery);
+  };
+
   return (
     <div className="topbar">
       <div className="topbar-content">
-        <img src={user.avatar} alt="User Avatar" className="avatar" />
-        <span className="user-name">{user.name}</span>
-        <button className="sign-out-button">Sign Out</button>
+        <div className="logo">
+          <img src="/images/F500K.png" alt="Logo" className="logo-img" />
+          <span className="logo-text">Fortune 500 Klub</span>
+        </div>
+        
+        <form className="searchbar" onSubmit={handleSearchSubmit}>
+          <input
+            type="text"
+            placeholder="Search..."
+            value={searchQuery}
+            onChange={handleSearchChange}
+            className="search-input"
+          />
+        </form>
+
+        {/* User Info */}
+        <div className="user-info">
+          <img src="/images/profile-icon-design-free-vector.jpg" alt="User Avatar" className="avatar" />
+          <span className="user-name">{user.name}</span>
+          <button className="sign-out-button">Sign Out</button>
+        </div>
       </div>
     </div>
   );

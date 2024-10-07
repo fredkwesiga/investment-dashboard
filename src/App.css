@@ -1,34 +1,220 @@
 /* App.css */
-.dashboard {
-  display: flex;
+/* Main Content CSS */
+.dashboard-main {
+  flex-grow: 1; /* Allows main content to take the remaining space */
+  padding: 20px; /* Add padding around the content */
+  margin-left: 240px; /* Adjust according to your sidebar width */
 }
 
+/* Metrics Container */
+.metrics-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px; /* Adjust padding for spacing */
+  width: 100%; 
+  height: auto;
+  box-sizing: border-box;
+}
+
+/* Individual Metric Card */
+.metric {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.metric-title {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.metric-performance {
+  font-size: 1.1rem;
+  color: #3ACA6B;
+  margin-bottom: 8px;
+}
+
+.metric-date {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Metrics Grid */
+.metrics-grid {
+  margin-top: 10px; /* Space above the grid */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns on larger screens */
+  gap: 20px; /* Space between cards */
+  max-width: 1200px; /* Maximum width */
+  width: 100%; /* Full width */
+  padding: 20px; /* Padding around the grid */
+}
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+  .metrics-grid {
+    grid-template-columns: 1fr; /* Single column on small screens */
+  }
+}
+
+
+
+
 .sidebar {
-  width: 200px;
-  background-color: #f7f7f7;
+  position: fixed;
+  left: 0;
+  top: 60px; /* Adjust according to top bar height */
+  width: 240px;
+  height: 100vh;
+  background-color: #F5F5F5; /* Light background for sidebar */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  padding-top: 20px;
+  overflow-y: auto;
+  z-index: 999;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #333;
+  font-weight: bold;
+}
+
+.sidebar ul li:hover {
+  background-color: #EDEDED;
+}
+
+.sidebar ul li.active {
+  background-color: #FFD2D2; /* Redish background to match active dashboard */
+  color: #e74c3c; /* Red color for active */
+}
+
+.sidebar ul li .icon {
+  margin-right: 10px;
+}
+
+.sidebar ul li .submenu {
+  display: none;
+  padding-left: 20px;
+}
+
+.sidebar ul li.active .submenu {
+  display: block;
+}
+
+.sidebar ul li .submenu li {
+  padding: 10px 0;
+  font-size: 14px;
 }
 
 .main-content {
   flex-grow: 1;
 }
 
-.top-bar {
-  background-color: #fff;
-  padding: 10px;
+/* TopBar CSS */
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
-.metrics-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  padding: 20px;
+.topbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
-.metric {
-  background-color: #e0f7fa;
-  padding: 10px;
-  border-radius: 8px;
+.logo {
+  display: flex;
+  align-items: center;
 }
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.searchbar {
+  flex-grow: 1;
+  margin: 0 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 15px;
+  border: 1px solid #ccc; 
+  /* background-color: #fff; */
+  font-size: 16px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-name {
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+.sign-out-button {
+  padding: 8px 15px;
+  background-color: #e74c3c; /* Sign out button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sign-out-button:hover {
+  background-color: #c0392b;
+}
+
+
+
+
+
 
 .notification-section {
   padding: 20px;

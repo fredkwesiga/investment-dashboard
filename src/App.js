@@ -27,14 +27,16 @@ const App = () => {
   }
 
   return (
-    <div className="dashboard">
+    <div className="dashboard-container">
       <Sidebar />
-      <div className="main-content">
+      <div className="dashboard-content">
         <TopBar />
-        <div className="metrics-container">
-          <DashboardMetrics investments={data.investments} />
+        <div className="dashboard-main">
+          <div className="metrics-wrapper">
+            <DashboardMetrics investments={data.investments} />
+          </div>
+          <Notification />
         </div>
-        <Notification />
       </div>
     </div>
   );
