@@ -416,6 +416,11 @@
   background-color: #2E9A53;
 }
 
+.compliance-chart {
+  width: 100%;
+  max-width: 400px; /* Adjust this size based on your layout */
+  margin: 0 auto; /* Center the chart */
+}
 
 
 

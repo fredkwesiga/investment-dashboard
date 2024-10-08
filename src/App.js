@@ -5,6 +5,7 @@ import TopBar from './components/TopBar';
 import DashboardMetrics from './components/DashboardMetrics';
 import Notification from './components/Notification';
 import LandingPage from './components/LandingPage'; 
+import ComplianceChart from './components/ComplianceChart';
 import './App.css';
 
 const App = () => {
@@ -46,6 +47,7 @@ const App = () => {
                   <div className="metrics-wrapper">
                     <DashboardMetrics investments={data.investments} />
                   </div>
+                  <ComplianceChart />
                   <Notification />
                 </div>
               </div>

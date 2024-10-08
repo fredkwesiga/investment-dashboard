@@ -8,25 +8,29 @@
         "id": 1,
         "name": "Actual Investment Portfolio",
         "performance": "10,000UGX",
-        "date": "01/0ctober/2024"
+        "date": "01/0ctober/2024",
+        "percentage": 10
       },
       {
         "id": 2,
         "name": "Projected Investment Portfolio",
         "performance": "40,000 UGX",
-        "date": "31/October/2024"
+        "date": "31/October/2024",
+        "percentage": 40
       },
       {
         "id": 3,
         "name": "Current Cummulative Revenue",
         "performance": "0 UGX",
-        "date": "31/October/2024"
+        "date": "31/October/2024",
+        "percentage": 0
       },
       {
         "id": 4,
         "name": "Out standing investment ",
         "performance": "-10,000 UGX",
-        "date": "01/0ctober/2024"
+        "date": "01/0ctober/2024",
+        "percentage": -10
       }
     ],
     "notifications": [
