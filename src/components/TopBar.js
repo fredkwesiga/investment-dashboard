@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import '../App.css';  // Make sure App.css includes the necessary styles
+import '../App.css'; 
 
 const TopBar = () => {
   const [user, setUser] = useState({});
   const [searchQuery, setSearchQuery] = useState("");
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios.get('/data/userData.json')
@@ -26,6 +29,14 @@ const TopBar = () => {
     // Implement search functionality (e.g., API call, filtering, etc.)
     console.log('Searching for:', searchQuery);
   };
+
+  const handleSignOut = () => {
+    // Perform sign-out logic, e.g., clearing user data, etc.
+    setUser({});
+
+    // Redirect to the landing page
+    navigate('/');
+  }
 
   return (
     <div className="topbar">
@@ -49,7 +60,7 @@ const TopBar = () => {
         <div className="user-info">
           <img src="/images/profile-icon-design-free-vector.jpg" alt="User Avatar" className="avatar" />
           <span className="user-name">{user.name}</span>
-          <button className="sign-out-button">Sign Out</button>
+          <button className="sign-out-button" onClick={handleSignOut}>Sign Out</button>
         </div>
       </div>
     </div>
