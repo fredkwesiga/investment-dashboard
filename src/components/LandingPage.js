@@ -1,7 +1,14 @@
 import React from 'react';
-
+import { useNavigate } from 'react-router-dom';  // Import useNavigate
 
 const LandingPage = () => {
+  const navigate = useNavigate();  // Create a navigate instance
+
+  const handleSignUp = () => {
+    // Redirect to the dashboard when "Sign Up" is clicked
+    navigate('/dashboard');
+  };
+
   return (
     <div>
       {/* Header Section */}
@@ -12,7 +19,8 @@ const LandingPage = () => {
             <li><a href="#home">Home</a></li>
             <li><a href="#features">Features</a></li>
             <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#signup">Sign Up</a></li>
+            {/* Update the Sign Up link to trigger the handleSignUp function */}
+            <li><button onClick={handleSignUp} className="signup-btn">Sign Up</button></li>
           </ul>
         </nav>
       </header>
@@ -29,19 +37,19 @@ const LandingPage = () => {
         <h2>Key Features</h2>
         <div className="features-grid">
           <div className="feature-item">
-            <img src="/icons/feature1.png" alt="Feature 1" />
-            <h3>Feature 1</h3>
-            <p>Short description of feature 1</p>
+            <img src="/images/real estate-01.png" alt="Feature 1" />
+            <h3>Fortune Real Estate</h3>
+            <p>F500K Real Estates is a next generation real estate company offering a comprehensive range of services, including land trading, real estate development, and property management.</p>
           </div>
           <div className="feature-item">
-            <img src="/icons/feature2.png" alt="Feature 2" />
-            <h3>Feature 2</h3>
-            <p>Short description of feature 2</p>
+            <img src="/images/finances-01.png" alt="Feature 2" />
+            <h3>Fortune Financial Services</h3>
+            <p>Fortune Financial Services is aimed at increasing credit uptake towards the Fortune 500 Klub investors in providing more accessiblity to capital by micro lending to working persons, SMEs, firms, companies and corporations within the Fortune 500 ecosystem.</p>
           </div>
           <div className="feature-item">
-            <img src="/icons/feature3.png" alt="Feature 3" />
-            <h3>Feature 3</h3>
-            <p>Short description of feature 3</p>
+            <img src="/images/tech-01.png" alt="Feature 3" />
+            <h3>FortuneTech</h3>
+            <p>Fortune tech was established with a view to carry on the business of providing financial technology services, software applications and other transactions related services. </p>
           </div>
         </div>
       </section>
@@ -73,7 +81,7 @@ const LandingPage = () => {
           <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
         </div>
         <div className="contact-info">
-          <p>Contact us: info@fortuneconnect.com</p>
+          <p>Contact us: info@fortune500klub.com</p>
         </div>
       </footer>
     </div>
