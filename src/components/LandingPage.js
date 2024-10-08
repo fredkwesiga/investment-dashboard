@@ -1,8 +1,8 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';  // Import useNavigate
+import { useNavigate } from 'react-router-dom';  
 
 const LandingPage = () => {
-  const navigate = useNavigate();  // Create a navigate instance
+  const navigate = useNavigate();  
 
   const handleSignUp = () => {
     // Redirect to the dashboard when "Sign Up" is clicked
@@ -11,7 +11,7 @@ const LandingPage = () => {
 
   return (
     <div>
-      {/* Header Section */}
+    
       <header className="header">
         <nav className="navbar">
           <div className="logo">FortuneConnect</div>
@@ -19,7 +19,7 @@ const LandingPage = () => {
             <li><a href="#home">Home</a></li>
             <li><a href="#features">Features</a></li>
             <li><a href="#pricing">Pricing</a></li>
-            {/* Update the Sign Up link to trigger the handleSignUp function */}
+           
             <li><button onClick={handleSignUp} className="signup-btn">Sign Up</button></li>
           </ul>
         </nav>

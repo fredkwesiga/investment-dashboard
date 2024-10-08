@@ -1,9 +1,8 @@
-/* App.css */
-/* Main Content CSS */
+
 .dashboard-main {
   flex-grow: 1; /* Allows main content to take the remaining space */
-  padding: 20px; /* Add padding around the content */
-  margin-left: 240px; /* Adjust according to your sidebar width */
+  padding: 20px; 
+  margin-left: 240px; 
 }
 
 /* Metrics Container */
@@ -11,7 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px 20px; /* Adjust padding for spacing */
+  padding: 40px 20px; 
   width: 100%; 
   height: auto;
   box-sizing: border-box;
@@ -46,29 +45,29 @@
 
 /* Metrics Grid */
 .metrics-grid {
-  margin-top: 10px; /* Space above the grid */
+  margin-top: 10px; 
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Two columns on larger screens */
-  gap: 20px; /* Space between cards */
-  max-width: 1200px; /* Maximum width */
-  width: 100%; /* Full width */
-  padding: 20px; /* Padding around the grid */
+  gap: 20px; 
+  max-width: 1200px; 
+  width: 100%; 
+  padding: 20px; 
 }
 
 /* Responsive breakpoints */
 @media (max-width: 768px) {
   .metrics-grid {
-    grid-template-columns: 1fr; /* Single column on small screens */
+    grid-template-columns: 1fr; 
   }
 }
 
 .sidebar {
   position: fixed;
   left: 0;
-  top: 60px; /* Adjust according to top bar height */
+  top: 60px; 
   width: 240px;
   height: 120vh;
-  background-color: #F5F5F5; /* Light background for sidebar */
+  background-color: #F5F5F5;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   padding-top: 20px;
   overflow-y: auto;
@@ -158,6 +157,7 @@
 .logo-text {
   font-size: 20px;
   font-weight: bold;
+  color: #333;
 }
 
 .searchbar {
@@ -195,40 +195,40 @@
 }
 
 .dropdown {
-  position: relative; /* Needed for absolute positioning of dropdown menu */
+  position: relative; 
 }
 
 .dropdown-toggle {
-  background: none; /* No background for the dropdown button */
-  border: none; /* No border */
-  color: white; /* Text color */
-  cursor: pointer; /* Pointer cursor */
-  margin-left: 10px; /* Spacing from the username */
+  background: none; 
+  border: none; 
+  color: white; 
+  cursor: pointer; 
+  margin-left: 10px; 
 }
 
 .dropdown-menu {
-  position: absolute; /* Position the dropdown menu */
-  right: 0; /* Align to the right */
-  top: 100%; /* Position below the button */
-  background-color: white; /* Background for dropdown */
-  border: 1px solid #ccc; /* Border for dropdown */
-  border-radius: 5px; /* Rounded corners */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-  z-index: 1000; /* Ensure it appears above other content */
+  position: absolute; 
+  right: 0; 
+  top: 100%; 
+  background-color: white; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+  z-index: 1000; 
 }
 
 .sign-out-button {
-  padding: 8px 15px; /* Adjust padding */
-  background-color: #e74c3c; /* Button color */
-  color: white; /* Text color */
-  border: none; /* No border */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer; /* Pointer cursor */
-  width: 100%; /* Full width of the dropdown */
+  padding: 8px 15px;
+  background-color: #e74c3c; 
+  color: white; 
+  border: none; 
+  border-radius: 5px;
+  cursor: pointer; 
+  width: 100%; 
 }
 
 .sign-out-button:hover {
-  background-color: #c0392b; /* Darker color on hover */
+  background-color: #c0392b; 
 }
 
 .notification-section {
@@ -339,8 +339,8 @@
 }
 
 .hero-section {
-  position: relative;  /* Ensures that the ::before element is positioned relative to the hero section */
-  background-image: url('../public/images/G85_0523.jpeg');  /* Replace with your image path */
+  position: relative;  
+  background-image: url('../public/images/G85_0523.jpeg');  
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -418,8 +418,8 @@
 
 .compliance-chart {
   width: 100%;
-  max-width: 400px; /* Adjust this size based on your layout */
-  margin: 0 auto; /* Center the chart */
+  max-width: 400px; 
+  margin: 0 auto; 
 }
 
 

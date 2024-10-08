@@ -26,12 +26,11 @@ const TopBar = () => {
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
-    // Implement search functionality (e.g., API call, filtering, etc.)
     console.log('Searching for:', searchQuery);
   };
 
   const handleSignOut = () => {
-    // Perform sign-out logic, e.g., clearing user data, etc.
+    // Perform sign-out logic
     setUser({});
 
     // Redirect to the landing page
